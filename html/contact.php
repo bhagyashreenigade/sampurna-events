@@ -3,8 +3,8 @@
 /* Code by David McKeown - craftedbydavid.com */
 /* Editable entries are bellow */
 
-$send_to = "support@imransdesign.com"; //Change to Your Own Email address here.
-$send_subject = "Message From N.Agency ";
+$send_to = "sampurnaaevents@gmail.com"; //Change to Your Own Email address here.
+$send_subject = "Message From Sampurna events";
 
 
 

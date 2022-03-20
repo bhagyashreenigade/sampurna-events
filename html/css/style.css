@@ -485,7 +485,7 @@ h4,
 h5,
 h6 {
   font-family: 'Montserrat', sans-serif;
-  color: #434343;
+  /* color: #434343; */
   text-transform: uppercase;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -493,32 +493,41 @@ h6 {
 }
 h1 {
   font-size: 36px;
+  color:#dc3b41
 }
 h2 {
   font-size: 26px;
+  color:#dc3b41
 }
 h3 {
   font-size: 22px;
+  color:#dc3b41;
+  font:bold
 }
 h4 {
   font-size: 18px;
+  color:#dc3b41
 }
 h5 {
   font-size: 16px;
+  color :black;
+  
 }
 h6 {
   font-size: 14px;
   line-height: 1.6;
+  color :black
 }
 p {
   line-height: 1.8em;
+  color :black
 }
 .section-title-bg {
   background-color: #f8f8f8;
   padding: 50px 0;
 }
 .section-subtitle {
-  color: #a9a9a9;
+  color: black;
 }
 .bigger-font {
   font-size: 50px;
@@ -1250,7 +1259,7 @@ blockquote {
   margin-bottom: 30px;
 }
 .pf-filter li .iso-button {
-  background-color: #fff;
+  background-color: white;
   color: #434343;
   padding: 10px 15px;
   margin-right: 5px;
@@ -1270,7 +1279,7 @@ blockquote {
 }
 .pf-filter.pf-filter-gray .iso-button {
   background-color: #f8f8f8;
-  color: #434343;
+  color: #dc3b41;
 }
 .pf-filter.pf-filter-gray .iso-button:hover {
   color: #dc3b41;
@@ -2002,7 +2011,7 @@ blockquote {
 .contact-form-dark .contact-form-item input[type="text"],
 .contact-form-dark .contact-form-item input[type="password"],
 .contact-form-dark .contact-form-item textarea {
-  background: #5d5d5d;
+  background: #dc3b41;
   color: #fff;
 }
 .contact-info {
