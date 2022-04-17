@@ -1,12 +1,12 @@
-	
+
 jQuery(document).ready(function ($) { // wait until the document is ready
-	$('#send').on('click', function(){ // when the button is clicked the code executes
+	$('#send').on('click', function () { // when the button is clicked the code executes
 		$('.error').fadeOut('slow'); // reset the error messages (hides them)
 
 		var error = false; // we will set this true if the form isn't valid
 
 		var name = $('input#name').val(); // get the value of the input field
-		if(name == "" || name == " ") {
+		if (name == "" || name == " ") {
 			$('#err-name').fadeIn('slow'); // show the error message
 			error = true; // change the error state to true
 		}
@@ -16,12 +16,12 @@ jQuery(document).ready(function ($) { // wait until the document is ready
 		if (email == "" || email == " ") { // check if the field is empty
 			$('#err-email').fadeIn('slow'); // error - empty
 			error = true;
-		}else if (!email_compare.test(email)) { // if it's not empty check the format against our email_compare variable
+		} else if (!email_compare.test(email)) { // if it's not empty check the format against our email_compare variable
 			$('#err-emailvld').fadeIn('slow'); // error - not right format
 			error = true;
 		}
 
-		if(error == true) {
+		if (error == true) {
 			$('#err-form').slideDown('slow');
 			return false;
 		}
@@ -32,8 +32,7 @@ jQuery(document).ready(function ($) { // wait until the document is ready
 			type: "POST",
 			url: $('#ajax-form').attr('action'),
 			data: data_string,
-			timeout: 6000,
-			error: function(request,error) {
+			error: function (request, error) {
 				if (error == "timeout") {
 					$('#err-timedout').slideDown('slow');
 				}
@@ -42,9 +41,11 @@ jQuery(document).ready(function ($) { // wait until the document is ready
 					$("#err-state").html('An error occurred: ' + error + '');
 				}
 			},
-			success: function() {
+			success: function (event) {
 				$('#ajax-form').slideUp('slow');
-				$('#ajaxsuccess').slideDown('slow');
+				$('#ajaxsuccess').slideDown('slowerror');
+				event.preventDefault();
+				return false;
 			}
 		});
 
